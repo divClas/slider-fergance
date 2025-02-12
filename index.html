@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="src/style.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="slider-section">
+      <div class="swiper main-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide main-slider__slide">
+            <div class="slider-section__slide">
+              <img src="src/image.png" class="entity-img" />
+            </div>
+          </div>
+          <div class="swiper-slide main-slider__slide">
+            <div class="slider-section__slide">
+              <img src="src/orig.webp" class="entity-img" />
+            </div>
+          </div>
+          <div class="swiper-slide main-slider__slide">
+            <div class="slider-section__slide">
+              <img src="src/image.png" class="entity-img" />
+            </div>
+          </div>
+        </div>
+
+        <div class="main-slider__pagination"></div>
+
+        <div
+          class="swiper-button-prev swiper-button-white main-slider__prev"
+        ></div>
+        <div
+          class="swiper-button-next swiper-button-white main-slider__next"
+        ></div>
+      </div>
+    </div>
+    <script type="module" src="/src/slider.js"></script>
+  </body>
+</html>
