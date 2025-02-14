@@ -45,6 +45,67 @@
     display: flex;
     overflow: hidden;
   }
+
+  &.black-theme {
+    .main-slider__pagination-bullet {
+      z-index: 22;
+      position: relative;
+      border-radius: 50%;
+      display: block;
+      width: 0.625rem;
+      height: 0.625rem;
+      background-color: rgba(40, 40, 40, 0.17);
+      opacity: 1;
+      border: transparent;
+      cursor: pointer;
+
+      @media (max-width:800px) {
+        width: 6px;
+        height: 6px;
+      }
+    }
+
+    .main-slider__pagination-bullet--active {
+      background-color: rgba(0, 0, 0, 1);
+    }
+  }
+
+  &.white-theme {
+    .main-slider__pagination-bullet {
+      z-index: 22;
+      position: relative;
+      border-radius: 50%;
+      display: block;
+      width: 0.625rem;
+      height: 0.625rem;
+      background-color: rgba(255, 255, 255, 0.3);
+      opacity: 1;
+      border: transparent;
+      cursor: pointer;
+
+      @media (max-width:800px) {
+        width: 6px;
+        height: 6px;
+      }
+    }
+
+    .main-slider__pagination-bullet--active {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    .slider-title {
+      color: white;
+    }
+
+    .slider-subitle {
+      color: white;
+    }
+
+    .slider-btn {
+      background-color: white;
+      color: black;
+    }
+  }
 }
 
 .main-slider__nav-wrapper {
@@ -104,28 +165,6 @@
 }
 
 
-
-.main-slider__pagination-bullet {
-  z-index: 22;
-  position: relative;
-  border-radius: 50%;
-  display: block;
-  width: 0.625rem;
-  height: 0.625rem;
-  background-color: rgba(40, 40, 40, 0.17);
-  opacity: 1;
-  border: transparent;
-  cursor: pointer;
-
-  @media (max-width:800px) {
-    width: 6px;
-    height: 6px;
-  }
-}
-
-.main-slider__pagination-bullet--active {
-  background-color: rgba(0, 0, 0, 1);
-}
 
 
 .swiper-slide {
@@ -204,9 +243,6 @@
     font-size: 1.625rem;
   }
 
-  &.white {
-    color: white;
-  }
 }
 
 .slider-subitle {
@@ -219,9 +255,7 @@
     font-size: 0.875rem;
   }
 
-  &.white {
-    color: white;
-  }
+
 }
 
 .slider-btn {
@@ -241,11 +275,8 @@
   justify-content: center;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 
-  &.white {
-    background-color: white;
-    color: black;
-  }
 }
 
 
