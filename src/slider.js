@@ -18,7 +18,7 @@ export const createSwiper = (settings) => {
   if (settings.autoplay) {
     Swiper.use([Autoplay]);
   }
-
+  const slides = document.querySelectorAll("swiper-slide");
   const swOptions = {
     ...settings.options,
     threshold: 3,
@@ -108,7 +108,21 @@ if (el) {
 
   sw.on("slideChange", (s) => {
     const video = s.slides[s.realIndex].querySelector(`video`);
+    const currentSlide = s.slides[s.realIndex];
+    const paginationContainer = document.querySelector(
+      ".main-slider__pagination"
+    );
 
+    if (currentSlide.classList.contains("black-theme")) {
+      paginationContainer.classList.add("black-theme");
+      paginationContainer.classList.remove("white-theme");
+    } else if (currentSlide.classList.contains("white-theme")) {
+      paginationContainer.classList.add("white-theme");
+      paginationContainer.classList.remove("black-theme");
+    } else {
+      paginationContainer.classList.add("black-theme");
+      paginationContainer.classList.remove("white-theme");
+    }
     if (video) {
       video?.play();
     }
